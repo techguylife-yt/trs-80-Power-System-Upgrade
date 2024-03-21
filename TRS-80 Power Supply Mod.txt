@@ -1,0 +1,36 @@
+
+from jaycee1980 on the more fun making it work discord server
+
+Replacement Power Supply - Meanwell RPT-60B 
+
+https://colorcomputerarchive.com/repo/Documents/Manuals/Hardware/Color%20Computer%201%20Schematic%20(Tandy).pdf if you havent found it
+
+Remove CR11
+
+Remove from the +12 Rail 
+	C7 (1800uf 35v)
+	CR14
+	U17
+
+Remove From the -12 Rail
+	C9 (470uf 36V)
+	CR15
+	U18
+	
+Remove from the +5 v rail
+	CR12 ( On Transformer )
+	CR13 ( On Transformer )
+	C10
+	Q2
+	Q3
+	U13
+	R66
+	CR17
+	
+Run a wire from the output pin of U17 (the side that joins to TP9) to the Meanwell's +12V output
+
+Run a wire from the output pin of U18 (the side that joins to TP10) to the Meanwells -12V output
+
+Fit a wire link where CR15 was so that the -12V supply gets to U19 via R67
+
+Run a wire from the side of R66 that connects to TP12 to the Meanwell's +5V output
